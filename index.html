@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLAWALE DIPO-ISIJOLA</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- header design -->
+     <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#service">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>  
+
+
+    <!-- home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, it's Me</h3>
+            <h1>Olawale Dipo-Isijola</h1>
+            <h3>And I'm a <span>Frontend Developer</span></h3>
+            <p>Competent front-end developer with a track record of working well with more experienced devs. Taking pleasure in tight collaboration with team members to ensure efficient workload management. </p>
+
+            <a href="My CV2.pdf" class="btn" target="_blank">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="images/img1.jpg" alt="" id="img1">
+        </div>
+    </section>
+
+    <!-- About section design -->
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/img3.jpg" alt="" id="img3">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Frontend Developer</h3>
+            <p>I am based in Lagos, Nigeria. I have 2 years of experience in my field. In my free time, I enjoy playing video games and making gaming content for my YouTube channel. You can follow me on social media.</p>
+
+            <div class="about-titles">
+                <p class="about-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="about-links" onclick="opentab('experience')">Experience</p>
+                <p class="about-links" onclick="opentab('education')">Education</p>
+            </div> 
+
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Web Development</span> <br> Web App Development</li>
+                    <li><span>UI/UX</span> <br> Designing Web Interfaces</li>
+                </ul>
+            </div>
+
+
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2018-2019</span> <br> Web Design Training CVIT Nigeria</li>
+                    <li><span>2022-Current</span> <br> Frontend Development Training Meta Coursera</li>
+                </ul>
+            </div>
+
+
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2014-2019</span> <br>B. SC. Electronics & Computer Engineering <br> Lagos State University</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- service section design -->
+    <section class="service" id="service">
+        <h2 class="heading">Our <span>Services</span></h2>
+
+        <div class="service-container">
+            <div class="service-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <p>Get  online with a custom website. I create user-friendly, visually appealling sites optimized for search engines. To book my services, head over to the Contact Information page.</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+
+            <div class="service-box">
+                <i class='bx bx-palette'></i>
+                <h3>Graphic Design</h3>
+                <p>Elevate your brand with stunning visuals, Logos, branding, marketing materials, and  websites. Let us make an impact. To book my services, head over to the Contact Information page</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+
+        </div> 
+    </section>
+
+    <!-- portfolio section design  -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/netflix1 (1).jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Netflix Clone</h4>
+                    <p>A simple Netflix application clone that includes a Sign up/Log in page, series of movie genres to choose from.</p>
+                    <br>
+                    <p>Coming Soon!!!</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/restuarant.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Restuarant</h4>
+                    <p>This is a simle Static page for a restuarant that displaces restuarant menus and special menus.</p>
+                    <br>
+                    <p>Coming Soon!!!</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/garment.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>E-Commerce</h4>
+                    <p>This is a e-commerce website where orders/payments can be placed online </p>
+                    <br>
+                    <p>Coming Soon!!!</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+
+    <!-- contact section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2> 
+
+            <form action="#" name="submit-to-google-sheet" >
+                <div class="input-box">
+                    <input type="text" name="Name" placeholder="Full Name">
+                    <input type="email" name="Email Address" placeholder="Email Address">
+                </div>
+    
+                <div class="input-box">
+                    <input type="number" name="Number" placeholder="Mobile Number">
+                    <input type="text" name="Email Subject" placeholder="Email Subject">
+                </div>
+                <textarea placeholder="Your Message" name="Message" cols="30" rows="10" ></textarea>
+                <input type="submit" value="Send Messsage" class="btn">
+            </form>
+            <p id="msg"></p>
+        
+            <div class="social-media">
+                <a href="https://wa.link/4owzx6" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://twitter.com/esyjollar_" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://instagram.com/esyjay_?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="https://www.linkedin.com/in/olawale-dipo-isijola-2a8027222" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+            </div>
+
+    </section>
+    
+    <!-- footer design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Olawale | All Rights Reserved</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="/JavaScript/script.js"></script>
+</body>
+</html>
