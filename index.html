@@ -171,15 +171,15 @@
 
             <form action="#" id='myForm' name="submit-to-google-sheet" >
                 <div class="input-box">
-                    <input type="text" name="Name" placeholder="Full Name">
-                    <input type="email" name="Email Address" placeholder="Email Address">
+                    <input type="text" name="Name" placeholder="Full Name" required>
+                    <input type="email" name="Email Address" placeholder="Email Address" required>
                 </div>
     
                 <div class="input-box">
-                    <input type="number" name="Number" placeholder="Mobile Number">
-                    <input type="text" name="Email Subject" placeholder="Email Subject">
+                    <input type="number" name="Number" placeholder="Mobile Number" required>
+                    <input type="text" name="Email Subject" placeholder="Email Subject" required>
                 </div>
-                <textarea placeholder="Your Message" name="Message" cols="30" rows="10" ></textarea>
+                <textarea placeholder="Your Message" name="Message" cols="30" rows="10" required></textarea>
                 <input type="submit" value="Send Messsage" class="btn">
             </form>
             <p id="msg"></p>
