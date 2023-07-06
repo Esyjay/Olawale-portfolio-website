@@ -71,15 +71,27 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbz-bLpBurl2P1BVln_rOF
   const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById('msg')
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML = 'Message <span>Sent!!!</span>'
-        setTimeout(function(){
-            msg.innerHTML = ''
-        },5000)
-        form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
+  document.getElementById('myForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form submission
+    var isValid = true;
+    var inputs = document.getElementsByTagName('input');
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].value === '') {
+        isValid = false;
+        alert('Please fill all the fields');
+        inputs[i].focus();
+        break;
+      }
+    }
+    if (isValid) {
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = 'Message <span>Sent!!!</span>'
+          setTimeout(function(){
+              msg.innerHTML = ''
+          },5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    }
+  });
