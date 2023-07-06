@@ -75,14 +75,25 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbz-bLpBurl2P1BVln_rOF
     e.preventDefault(); // Prevent form autosubmission
     var isValid = true;
     var inputs = document.getElementsByTagName('input');
+    var textarea = document.getElementsByTagName('textarea');
     for (var i = 0; i < inputs.length; i++) {
-      if (inputs[i].value === '') {
+        if (inputs[i].value === '') {
         isValid = false;
         alert('Please fill all the fields');
         inputs[i].focus();
         break;
       }
     }
+
+    for (var i = 0; i < textarea.length; i++) {
+        if (textarea[i].value === '') {
+        isValid = false;
+        alert('Please fill all the fields');
+        inputs[i].focus();
+        break;
+      }
+    }
+      
     if (isValid) {
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
