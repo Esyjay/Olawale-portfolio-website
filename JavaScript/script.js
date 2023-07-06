@@ -73,29 +73,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbz-bLpBurl2P1BVln_rOF
 
   document.getElementById('myForm').addEventListener('submit', function(e) {
     e.preventDefault(); // Prevent form autosubmission
-    var isValid = true;
-    var inputs = document.getElementsByTagName('input');
-    var textarea = document.getElementsByTagName('textarea');
-    for (var i = 0; i < inputs.length; i++) {
-        if (inputs[i].value === '') {
-        isValid = false;
-        alert('Please fill all the fields');
-        inputs[i].focus();
-        break;
-      }
-    }
-
-    for (var i = 0; i < textarea.length; i++) {
-        if (textarea[i].value === '') {
-        isValid = false;
-        alert('Please fill all the fields');
-        inputs[i].focus();
-        break;
-      }
-    }
-      
-    if (isValid) {
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
           msg.innerHTML = 'Message <span>Sent!!!</span>'
           setTimeout(function(){
@@ -105,4 +83,38 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbz-bLpBurl2P1BVln_rOF
         })
         .catch(error => console.error('Error!', error.message))
     }
-  });
+)
+      
+  //   var isValid = true;
+  //   var inputs = document.getElementsByTagName('input');
+  //   var textarea = document.getElementsByTagName('textarea');
+  //   for (var i = 0; i < inputs.length; i++) {
+  //       if (inputs[i].value === '') {
+  //       isValid = false;
+  //       alert('Please fill all the fields');
+  //       inputs[i].focus();
+  //       break;
+  //     }
+  //   }
+
+  //   for (var i = 0; i < textarea.length; i++) {
+  //       if (textarea[i].value === '') {
+  //       isValid = false;
+  //       alert('Please fill all the fields');
+  //       inputs[i].focus();
+  //       break;
+  //     }
+  //   }
+      
+  //   if (isValid) {
+  //       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  //       .then(response => {
+  //         msg.innerHTML = 'Message <span>Sent!!!</span>'
+  //         setTimeout(function(){
+  //             msg.innerHTML = ''
+  //         },5000)
+  //         form.reset()
+  //       })
+  //       .catch(error => console.error('Error!', error.message))
+  //   }
+  // });
