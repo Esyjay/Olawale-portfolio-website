@@ -72,7 +72,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbz-bLpBurl2P1BVln_rOF
   const msg = document.getElementById('msg')
 
   document.getElementById('myForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent form submission
+    e.preventDefault(); // Prevent form autosubmission
     var isValid = true;
     var inputs = document.getElementsByTagName('input');
     for (var i = 0; i < inputs.length; i++) {
